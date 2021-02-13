@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <title>Debuggers - Vitor Rodrigues</title>
+    <script src="calculadora.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div>
+        <section>
+            <header>Calculadora - Utilize somente inteiros</header>
+            <content>
+                <p>Digite os números</p>
+                <div class="area_dados">
+                    x:<input type="text" name="num1" id="num1" type="number" inputmode="numeric"> y:<input type="text" name="num2" id="num2" type="number" inputmode="numeric"> <span id="resultado"></span>
+                </div>
+                <div class="area_botoes">
+                    <input type="button" value="Somar" onclick="fazerCalculo('+')">
+                </div>
+            </content>
+        </section>
+    </div>
+</body>
+
+<script>
+    // Códigos da página
+    function fazerCalculo(operador) {
+        let x = lerInteiro("num1")
+        let y = lerInteiro("num2")
+        
+        if (isNaN(x) || isNaN(y)) {
+            escreverResultado("Digite apenas números para somar")
+            return
+        }
+
+        let resultado = calcular(x, y, operador)
+        escreverResultado("= " + resultado)
+    }
+
+    function calcular(x,y,op) {
+        switch (op) {
+            case "+":
+                return Calculadora.somar(x,y)
+        }
+        
+        throw "operação inválida"
+    }
+
+    function escreverResultado(html) {
+        document.getElementById("resultado").innerHTML = html
+    }
+
+    function lerInteiro(id) {
+        return parseInt(document.getElementById(id).value)
+    }
+
+    // Executa a função quando a página terminar de carregar
+    window.onload = function() {
+        // Coloca foco no elemento da calculadora
+        document.getElementById("num1").focus()
+    }
+</script>
+</html>
