@@ -11,5 +11,8 @@ var Calculadora = {
     },
     subtrair: function(x, y) {
         return x - y
+    },
+    multiplicar: function(x,y) {
+        return x * y
     }
 }
