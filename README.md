@@ -1,2 +1,3 @@
-# Debug-Simples
-Projeto para entender o funcionamento da ferramenta de debug através do browser ou de sua ferramenta preferida
+# Calculadora Louca
+
+Projeto criado para facilitar o entendimento de novos desenvolvedores sobre como fazer debug em código Javascript e também sobre o uso do GIT!
