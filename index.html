@@ -18,6 +18,7 @@
                 </div>
                 <div class="area_botoes">
                     <input type="button" value="Somar" onclick="fazerCalculo('+')">
+                    <input type="button" value="Subtrair" onclick="fazerCalculo('-')">
                 </div>
             </content>
         </section>
@@ -43,6 +44,8 @@
         switch (op) {
             case "+":
                 return Calculadora.somar(x,y)
+            case "-":
+                return Calculadora.subtrair(x,y)
         }
         
         throw "operação inválida"

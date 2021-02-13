@@ -9,10 +9,7 @@ var Calculadora = {
 
         return soma
     },
-    subtracao: function(x, y) {
+    subtrair: function(x, y) {
         return x - y
-    },
-    potencia: function(x,y) {
-        return x ^ y
     }
 }
