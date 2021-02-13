@@ -20,6 +20,7 @@
                     <input type="button" value="Somar" onclick="fazerCalculo('+')">
                     <input type="button" value="Subtrair" onclick="fazerCalculo('-')">
                     <input type="button" value="Multiplicar" onclick="fazerCalculo('*')">
+                    <input type="button" value="Dividir" onclick="fazerCalculo('/')">
                 </div>
             </content>
         </section>
@@ -49,6 +50,8 @@
                 return Calculadora.subtrair(x,y)
             case "*":
                 return Calculadora.multiplicar(x,y)
+            case "/":
+                return Calculadora.dividir(x,y)
         }
         
         throw "operação inválida"

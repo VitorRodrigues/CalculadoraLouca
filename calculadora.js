@@ -14,5 +14,9 @@ var Calculadora = {
     },
     multiplicar: function(x,y) {
         return x * y
+    },
+    dividir: function (x,y) {
+        if (y == 0) { return Infinity }
+        return x / y
     }
 }
